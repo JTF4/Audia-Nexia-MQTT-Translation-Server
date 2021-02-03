@@ -1,0 +1,16 @@
+{
+  "name": "audio_nexia_rest_translation_server",
+  "version": "1.0.0",
+  "description": "Translates RESTful API reuqests to Nexia or Audia TCP requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mqtt": "^4.2.6",
+    "netcat": "^1.5.0"
+  }
+}
