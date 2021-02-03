@@ -13,15 +13,16 @@ var DSPip = '10.2.10.200';
 var DSPport = 23; // Default 23 (Should never have to change this)
 // End Config
 
-
+// Requirements
 var net = require('net');
-
 var mqtt = require('mqtt'), url = require('url');
-// Parse
+
+// Parse MQTT Server Connection Data
 var mqtt_url = url.parse(process.env.CLOUDAMQP_MQTT_URL || 'mqtt://' + MQTTbroker + ':' + MQTTport);
 var auth = (mqtt_url.auth || ':').split(':');
 var url = "mqtt://" + mqtt_url.host;
-//username: auth[0] + ":" + auth[0] if you are on a shared instance
+
+// Options Setup
 var options = {
   port: mqtt_url.port,
   clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
@@ -36,7 +37,7 @@ client.on('connect', function() { // When connected
 
   // subscribe to a topic
   client.subscribe(MQTTtopic, function() {
-    // when a message arrives, do something with it
+    // when a message arrives, translate to TCP command
     client.on('message', function(topic, message, packet) {
       console.log("Received '" + message + "' on '" + topic + "'");
       
