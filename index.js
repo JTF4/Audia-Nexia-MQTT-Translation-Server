@@ -4,12 +4,12 @@ var MQTTuser = 'mqtt';
 var MQTTpass = 'mqtt';
 
 // MQTT Broker Server Connection
-var MQTTtopic = 'audio/audia/command';
-var MQTTbroker = '10.2.10.33';
+var MQTTtopic = '<MQTT Topic>';
+var MQTTbroker = 'MQTT IP';
 var MQTTport = 1883; // Default 1883
 
 // DSP Connection
-var DSPip = '10.2.10.200';
+var DSPip = '<Audia IP>';
 var DSPport = 23; // Default 23 (Should never have to change this)
 // End Config
 
