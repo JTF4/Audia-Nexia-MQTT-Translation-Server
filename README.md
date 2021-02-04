@@ -3,7 +3,8 @@ This server translates MQTT commands to TCP commands for the Biamp Audia and Nex
 
 # Configuration
 ## Translation Server
-* Insert the IP of your Audia/Nexia device in the host field.
+* Insert the IP of your Audia/Nexia device in the Audia/Nexia host variable.
+* Insert the IP of your MQTT broker server in the MQTT broker host variable.
 * Insert the MQTT topic to subscribe to.
 * Run index.js
 
