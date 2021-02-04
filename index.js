@@ -32,9 +32,10 @@ var options = {
 
 // Create a client connection
 var client = mqtt.connect(url, options);
+console.log("Server Started");
 
 client.on('connect', function() { // When connected
-
+  console.log("Client Connected");
   // subscribe to a topic
   client.subscribe(MQTTtopic, function() {
     // when a message arrives, translate to TCP command
